@@ -1,0 +1,97 @@
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>CatsMap Demo</title>
+        
+        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=YOURKEYHERE&sensor=false"
+            type="text/javascript"></script>
+        
+        <!-- fail nicely if the browser has no Javascript -->
+        <noscript><b>JavaScript must be enabled in order for you to use Google Maps.</b>
+            However, it seems JavaScript is either disabled or not supported by your browser.
+            To view Google Maps, enable JavaScript by changing your browser options, and then
+            try again.
+        </noscript>
+        
+        <script type="text/javascript" source="catsmap.js"></script>
+    </head>
+    <body onload="initialize()" onunload="GUnload()">
+        <CENTER>
+            <h1>CatsMap    <img border="0" src="http://store.cstv.com/marketplace/store/Vendor349/fullscale/logo-c.jpg" width="53" height="53" /></h1>
+            
+            
+            <div id="map_canvas" style="width: 1000px; height: 450px"></div>
+            
+            <form action="#" onsubmit="search(this.field.value); return false">
+                <table>
+                    <tr>
+                        
+                        <th align="right">Search Building:&nbsp;</th>
+                        <td>
+                            <td align="right"><input type="text" size="25" id="query" name="field" value=""/>
+                                <input name="submit" type="submit" value="Search" />
+                            </td>
+                            </tr>
+                </table>
+            </form>
+            
+            
+            <p><b>Find Directions</b></p>
+            <form action="#" onsubmit="directions(this.fromfield.value,this.tofield.value); return false">
+                <table>
+                    <tr>
+                        <th align="right">From:&nbsp;</th>
+                        <td>
+                            <td align="right"><input type="text" size="25" id="fromBuilding" name="fromfield" value=""/>
+                            </td>
+                            
+                            <th align="right">To:&nbsp;</th>
+                            <td>
+                                <td align="right"><input type="text" size="25" id="toBuilding" name="tofield" value=""/>
+                                    <input name="submit" type="submit" value="Show Path" />
+                                </td>
+                                </tr>
+                </table>
+            </form>
+            
+            
+            
+        </CENTER>
+        
+        <form>
+            <input type="button" value="CatsMap On" onclick="show_catsMap()" />
+        </form>
+        
+        <form>
+            <input type="button" value="CatsMap Off" onclick="hide_catsMap()" />
+        </form>
+        
+        <p>CatsMap is the map used by Texas State University</p>
+        
+        <h4>How to use Demo </h4>
+        
+        <p>
+        The following buildings are available to search and find directions between. They can be searched by any of the following names.<br><br>
+        
+        
+        Roy F Mitte - Mitte, RFM<br>
+        
+        Alkek Library- Library, Alkek, Albert B. Alkek<br>
+        
+        Mathematics Computer Science - MCS<br>
+        
+        Derrick Hall - Derrick, Derr<br>
+        
+        Jerome and Catherine Supple - science building, supple<br>
+        
+        
+        
+        </p>
+        
+        
+    </body>
+</html>
+
+
